@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> JAVASCRIPT Q&A (Array Of Objects)</h1>
+
+    <h2>QUESTION."let studentRecords = [ {name: 'John', id: 123, marks : 98 },
+        {name: 'Baba', id: 101, marks : 23 },<br>
+        {name: 'yaga', id: 200, marks : 45 },<br>
+        {name: 'Wick', id: 115, marks : 75 } ] " </h2>
+
+    <h3>Q1."We are interested in retrieving only the students' names; all the names should be in caps.   
+       <br><br>  ['JOHN', 'BABA', 'YAGA', 'WICK']"</h3>
+
+    <pre> 
+        let ans = []
+        for(i=0; i&lt;studentRecords.length; i++){
+            ans.push(studentRecords[i].name.toUpperCase());
+            }
+        console.log(ans)
+    </pre>
+
+<hr>
+    "Suppose we have the same dataset as above but this time we want to get the details of students who scored more than 50 marks.
+        <br><br>
+        [{name: 'John', id: 123, marks: 98 },<br><br>{name: 'Wick', id: 115, marks: 75 }]"
+    </h3>
+
+    <pre>
+        let ans = []
+        for(i=0; i&lt;studentRecords.length; i++){
+              if (studentRecords[i].marks>50){
+                    ans.push(studentRecords[i])
+            }
+        }
+        console.log(ans)
+    </pre>
+
+    <h3>Q3.Retrieve the details of students who scored more than 50 marks and have IDs greater than 120.</h3>
+    <pre>
+        let ans = []
+        for(i=0; i&lt;studentRecords.length; i++){
+              if (studentRecords[i].marks>50 && studentRecords[i].id>120){
+                    ans.push(studentRecords[i])
+            }
+        }
+        console.log(ans)
+    </pre>
+    <h3>Q4.Consider the same scenario we have discussed above, but this time we would like to know 
+        the sum total of the marks of the students.</h3>
+        <pre>
+            let ans = []
+        let add =0
+        for(i=0; i&lt;studentRecords.length; i++){
+              add+= studentRecords[i].marks
+            }
+
+        console.log(add)
+
+        </pre>
+    <h3>Q5.This time we want to get only the names of the students who scored more than 50 marks from the same dataset used above.</h3>
+    <pre>
+         let ans = []
+                    for(i=0; i&lt;studentRecords.length; i++){
+                if (studentRecords[i].marks&lt;50){
+                            ans.push(studentRecords[i].name)
+                    }
+               }   
+                console.log(ans)
+
+    </pre>
+    <h3>Q6.This time we are required to print the sum of marks of the students with id > 120.</h3>
+    <pre>
+     let ans = []
+        let add =0
+        for(i=0; i<studentRecords.length; i++){
+        if (studentRecords[i].id>120){
+            add+= studentRecords[i].marks
+        }
+
+        }   
+        console.log(add)
+
+    </pre>
+    <h3>Q7.This time we are required to print the total marks of the students with marks greater
+             than 50 after a grace of 15 marks has been added to those students who scored less than 50.</h3>
+        <pre>
+            let ans = []
+            let add =0
+            for(i=0; i&lt;studentRecords.length; i++){
+            if (studentRecords[i].marks&lt;50 ){
+                 studentRecords[i].marks+15
+            }
+            if(studentRecords[i].marks>50 ){
+                add+=studentRecords[i].marks
+            }
+            }   
+            console.log(add)
+
+
+        </pre>
+    <h3>Create 6 objects , each object will have name, class, roll no as properties. Store these objects in an array of objects. </h3>
+    <pre>
+        let Student_details = [
+        {
+            name    : "raj",
+            class   : "I",
+            roll_no :  23
+        },
+        {
+            name    : "Rohit",
+            class   : "II",
+            roll_no :  25
+        },
+        {
+            name    : "Aziz",
+            class   : "III",
+            roll_no : 30
+        },
+        {
+            name    : "Alam",
+            class   : "IV",
+            roll_no : 35
+        },
+        {
+            name    : "Rahul",
+            class   : "V",
+            roll_no : 38
+        },
+        {
+            name    : "Rajesh",
+            class   : "VI",
+            roll_no : 40
+        },
+    ];
+
+    console.log(Student_details);
+
+
+</body>
+</html>
